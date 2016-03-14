@@ -1,0 +1,26 @@
+<!--Create module “myapp” and controller “ mycontroller” with scope properties
+such as “ name and last name”.-->
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title>AngularJS</title>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script type="text/javascript">
+		var module = angular.module('myApp', []);
+		module.controller('homeCtrl', function($scope){
+			$scope.emp = {
+				firstName : 'OM',
+				lastName : 'PRAKASH'
+			}
+		});
+	</script>
+	</head>
+	<body>
+		<center>
+			<div ng-controller="homeCtrl">
+				Employees full name is: {{emp.firstName}} {{emp.lastName}}.
+			</div>
+		</center>
+	</body>
+</html>
